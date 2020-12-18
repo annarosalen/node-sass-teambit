@@ -8,7 +8,6 @@
         #left-cont, #right-cont{
             @include left-right-container; 
             height: 100%;
-            border: 1px solid black;
             @include display-flex-column;
             justify-content: center;
             img{

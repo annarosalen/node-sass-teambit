@@ -100,7 +100,6 @@ main section {
 #prima .container #right-cont {
   width: 50%;
   height: 100%;
-  border: 1px solid black;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -145,7 +144,7 @@ main section {
   align-items: center;
   justify-content: center;
   padding: 10px;
-  background-color: #4466d4;
+  background-color: #0e14ee;
   border: none;
   border-radius: 10px;
   color: white;
@@ -157,7 +156,7 @@ main section {
 
 #seconda,
 #terza {
-  background-color: #7f14d4;
+  background-color: #4466d4;
   display: flex;
   justify-content: center;
   height: 900px;
@@ -185,7 +184,7 @@ main section {
 #seconda .container .below-cont > p,
 #terza .container .above-cont > p,
 #terza .container .below-cont > p {
-  padding: 0 400px;
+  padding: 0 300px;
 }
 
 #seconda .container .above-cont .figure-text-container,
