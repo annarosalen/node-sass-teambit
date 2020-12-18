@@ -1,0 +1,49 @@
+#quarta, #quinta, #sesta, #settima{
+    @include display-flex-row;
+
+    .left, .right{
+        width: 50%;
+        padding-top: 100px;
+    }
+
+    .right{
+        padding-left: 20px;      
+    }
+}
+
+.text-cont{
+    line-height: 1.6;
+    font-size: 26px;
+    h3,p{
+        padding-bottom: 20px;
+    }
+    a{
+        color: $blue-buttons;
+
+        i{
+            font-size: 20px;
+        }
+    }
+}
+
+.img-big{
+    max-width: 768px;
+}
+
+.img-little{
+    margin-top: 30px;
+    margin-left: 40px;
+    max-width: 270px;
+}
+
+#quarta, #sesta{
+    .right{
+        padding-right: 350px;
+    }
+} 
+
+#quinta, #settima{
+    .left{
+        padding-left: 350px;
+    }
+} 

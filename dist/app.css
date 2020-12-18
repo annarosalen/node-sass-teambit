@@ -88,7 +88,8 @@ nav button:hover {
 }
 
 main section {
-  height: 600px;
+  height: 700px;
+  border-bottom: 1px solid black;
 }
 
 #prima {
@@ -228,5 +229,70 @@ main section {
 #seconda .container .below-cont h3,
 #terza .container .below-cont h3 {
   padding-top: 20px;
+}
+
+#quarta,
+#quinta,
+#sesta,
+#settima {
+  display: flex;
+  flex-direction: row;
+}
+
+#quarta .left,
+#quarta .right,
+#quinta .left,
+#quinta .right,
+#sesta .left,
+#sesta .right,
+#settima .left,
+#settima .right {
+  width: 50%;
+  padding-top: 100px;
+}
+
+#quarta .right,
+#quinta .right,
+#sesta .right,
+#settima .right {
+  padding-left: 20px;
+}
+
+.text-cont {
+  line-height: 1.6;
+  font-size: 26px;
+}
+
+.text-cont h3,
+.text-cont p {
+  padding-bottom: 20px;
+}
+
+.text-cont a {
+  color: #0e14ee;
+}
+
+.text-cont a i {
+  font-size: 20px;
+}
+
+.img-big {
+  max-width: 768px;
+}
+
+.img-little {
+  margin-top: 30px;
+  margin-left: 40px;
+  max-width: 270px;
+}
+
+#quarta .right,
+#sesta .right {
+  padding-right: 350px;
+}
+
+#quinta .left,
+#settima .left {
+  padding-left: 350px;
 }
 
