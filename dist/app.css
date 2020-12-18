@@ -1,0 +1,233 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  color: #040f0f;
+}
+
+.container {
+  display: flex;
+  flex-direction: row;
+  width: 1200px;
+  height: 100%;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+#google-logo {
+  height: 20px;
+}
+
+header {
+  display: flex;
+  justify-content: center;
+  min-height: 100px;
+  padding-bottom: 40px;
+}
+
+nav {
+  display: flex;
+  flex-direction: row;
+  border-bottom: 1px solid gray;
+  align-items: center;
+}
+
+nav #logo {
+  width: 20%;
+  color: #040f0f;
+}
+
+nav #menu {
+  width: 70%;
+  text-align: right;
+  padding-right: 40px;
+}
+
+nav #menu li {
+  display: inline-block;
+  padding-left: 40px;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+nav #menu li a {
+  color: #040f0f;
+}
+
+nav #menu li i {
+  font-size: 10px;
+}
+
+nav button {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  width: 130px;
+  padding: 10px;
+  background-color: white;
+  border: 1px solid blue;
+  color: blue;
+  font-weight: bold;
+  border-radius: 10px;
+}
+
+nav button img {
+  padding-right: 10px;
+}
+
+nav button:hover {
+  background-color: #30488f;
+  color: white;
+}
+
+main section {
+  height: 600px;
+}
+
+#prima {
+  display: flex;
+  justify-content: center;
+}
+
+#prima .container #left-cont,
+#prima .container #right-cont {
+  width: 50%;
+  height: 100%;
+  border: 1px solid black;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+#prima .container #left-cont img,
+#prima .container #right-cont img {
+  max-width: 570px;
+}
+
+#prima .container #left-cont {
+  padding-right: 100px;
+}
+
+#prima .container #left-cont h1 {
+  font-size: 50px;
+  line-height: 1.4;
+  padding-bottom: 30px;
+}
+
+#prima .container #left-cont p {
+  font-size: 25px;
+  line-height: 1.4;
+  padding-bottom: 50px;
+}
+
+#prima .container #left-cont #buttons {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding-bottom: 20px;
+}
+
+#prima .container #left-cont #buttons span {
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+#prima .container #left-cont #buttons button {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+  background-color: #4466d4;
+  border: none;
+  border-radius: 10px;
+  color: white;
+}
+
+#prima .container #left-cont #buttons button img {
+  padding-right: 10px;
+}
+
+#seconda,
+#terza {
+  background-color: #7f14d4;
+  display: flex;
+  justify-content: center;
+  height: 900px;
+}
+
+#seconda .container,
+#terza .container {
+  display: flex;
+  flex-direction: column;
+  border-bottom: 1px solid gray;
+}
+
+#seconda .container .above-cont,
+#seconda .container .below-cont,
+#terza .container .above-cont,
+#terza .container .below-cont {
+  height: 400px;
+  width: 100%;
+  text-align: center;
+  font-size: 25px;
+  padding-top: 100px;
+}
+
+#seconda .container .above-cont > p,
+#seconda .container .below-cont > p,
+#terza .container .above-cont > p,
+#terza .container .below-cont > p {
+  padding: 0 400px;
+}
+
+#seconda .container .above-cont .figure-text-container,
+#seconda .container .below-cont .figure-text-container,
+#terza .container .above-cont .figure-text-container,
+#terza .container .below-cont .figure-text-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  padding-top: 70px;
+}
+
+#seconda .container .above-cont .figure-text-container .card,
+#seconda .container .below-cont .figure-text-container .card,
+#terza .container .above-cont .figure-text-container .card,
+#terza .container .below-cont .figure-text-container .card {
+  width: 250px;
+  font-size: 20px;
+  padding: 0 20px;
+}
+
+#seconda .container .above-cont .figure-text-container .card img,
+#seconda .container .below-cont .figure-text-container .card img,
+#terza .container .above-cont .figure-text-container .card img,
+#terza .container .below-cont .figure-text-container .card img {
+  height: 80px;
+}
+
+#seconda .container .above-cont .figure-text-container .card p,
+#seconda .container .below-cont .figure-text-container .card p,
+#terza .container .above-cont .figure-text-container .card p,
+#terza .container .below-cont .figure-text-container .card p {
+  padding-top: 10px;
+}
+
+#seconda .container .below-cont img,
+#terza .container .below-cont img {
+  height: 300px;
+}
+
+#seconda .container .below-cont h3,
+#terza .container .below-cont h3 {
+  padding-top: 20px;
+}
+

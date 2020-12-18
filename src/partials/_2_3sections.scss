@@ -1,0 +1,54 @@
+#seconda, #terza{
+    background-color: $bg-sections;
+    display: flex;
+    justify-content: center;
+    height: 900px;
+    
+    .container{
+        @include display-flex-column;
+        border-bottom: 1px solid gray;
+
+        .above-cont, .below-cont{
+            height: 400px;
+            width: 100%;
+            text-align: center;
+            font-size: 25px;
+            padding-top: 100px;
+
+            & >p{
+                padding: 0 400px;
+            }
+
+            .figure-text-container{
+                @include display-flex-row;
+                justify-content: center;
+                padding-top: 70px;
+    
+                .card{
+                    width: 250px;
+                    font-size: 20px;
+                    padding: 0 20px;
+                    img{
+                        height: 80px;
+                    }
+                    p{
+                        padding-top: 10px;
+                    }
+                }
+            }
+
+        }
+
+        .below-cont img{
+            height: 300px;
+        }
+
+        .below-cont h3{
+            padding-top: 20px;
+        }
+       
+        
+    }
+    
+}
+

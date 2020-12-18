@@ -1,0 +1,65 @@
+
+#prima{
+    display: flex;
+    justify-content: center;
+    .container{
+
+
+        #left-cont, #right-cont{
+            @include left-right-container; 
+            height: 100%;
+            border: 1px solid black;
+            @include display-flex-column;
+            justify-content: center;
+            img{
+                max-width: 570px;
+            }
+        }
+
+        #left-cont{
+            padding-right: 100px;
+            
+           h1{
+               font-size: 50px;
+               line-height: 1.4;
+               padding-bottom: 30px;
+           }
+           p{
+               font-size: 25px;
+               line-height: 1.4;
+               padding-bottom: 50px;
+           }
+
+           #buttons{
+               @include display-flex-row;
+               align-items: center;
+               padding-bottom: 20px;
+
+               span{
+                   margin-left: 10px;
+                   margin-right: 10px;
+               }
+
+                button{
+                    @include display-flex-row;
+                    align-items: center;
+                    justify-content: center;
+                    padding: 10px;
+                    background-color: $blue-buttons;
+                    border:none;
+                    border-radius: 10px;
+                    color: white;
+
+                    img{
+                        padding-right: 10px;
+                    }
+                }
+           }
+
+           
+        }   
+
+
+        
+    }
+}

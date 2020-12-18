@@ -1,0 +1,39 @@
+*{
+    padding:0;
+    margin:0;
+    box-sizing: border-box;
+}
+
+body{
+    color: $text-color;
+}
+
+@mixin display-flex-row {
+    display: flex;
+    flex-direction: row;
+}
+
+@mixin display-flex-column{
+    display: flex;
+    flex-direction: column;
+}
+
+
+.container {
+    @include display-flex-row;
+    width: 1200px;
+    height: 100%;
+}
+
+a{
+    text-decoration: none;
+    color: black;
+}
+
+@mixin left-right-container{
+    width: 50%;
+}
+
+#google-logo{
+    height: 20px;
+}
