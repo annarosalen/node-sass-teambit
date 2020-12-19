@@ -1,0 +1,40 @@
+#ottava{
+    @include display-flex-column;
+    align-items: center;
+    justify-content: center;
+    background-color: $bg-sections;
+
+    h2{
+        font-size: 40px;
+        line-height: 1.6;
+        margin-top: 60px;
+    }
+
+    #quote{
+        background-color: white;
+        max-width: 628px;
+        padding: 20px 20px 20px 40px;
+        border: 1px solid gray;
+        margin:30px 0;
+        
+        p{
+            font-size: 18px;
+            margin-bottom: 20px;
+        }
+    }   
+
+    #author{
+        @include display-flex-row;
+        align-items: center;
+
+        img{
+            width: 38px;
+            margin-right: 10px;
+        }
+
+        #name{
+            color: blue;
+        }
+        
+    }
+}
