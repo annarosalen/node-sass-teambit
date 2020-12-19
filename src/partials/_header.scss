@@ -1,6 +1,7 @@
 header{
-    display: flex;
+    width: 100%;
+    position: fixed;
+    background-color: white ;
+    @include display-flex-row;
     justify-content: center;
-    min-height: 100px;
-    padding-bottom: 40px;
 }

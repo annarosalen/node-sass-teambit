@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="app.css">
     <script src="app.js"></script>
     <script src="https://use.fontawesome.com/617605346e.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vue"></script>
 
 </head>
 <body>
@@ -14,17 +15,27 @@
 
    
     <header>
-        <nav class="container">
+        <nav id="navbar-header" class="container">
             <div id="logo">
+                <img src="../img/logo-small.svg" alt="">
                 <h1>Teambit</h1>
             </div>
     
             <div id="menu">
                 <ul>
-                    <li><a href="#">Home <i class="fa fa-chevron-down" aria-hidden="true"></i></a> </li>
-                    <li><a href="#">Home</a></li>
-                    <li><a href="#">Home</a></li>
-                    <li><a href="#">Home</a></li>
+                    <li class="lidrop" v-for="(item, index) in menu" @click="showDrop(index)" >
+                        <a :href="item.link">{{item.text}}</a>
+                        <i class="fa fa-chevron-down" aria-hidden="true"></i>
+          
+                        <!-- dropdown -->
+                        <nav class="dropdown" :class="{active: index===indexMenu}" @mouseleave="hideDrop">
+                          <ul>
+                            <li v-for="drop in item.dropdown">
+                              <a :href="drop.droplink">{{drop.droptext}}</a>
+                            </li>
+                          </ul>
+                        </nav> <!--fine dropdown-->
+                      </li><!--fine lidrop-->
                 </ul>
             </div>
     
@@ -41,26 +52,34 @@
 
         <section id="prima">
             <div class="container">
+
                 <div id="left-cont">
                     <h1>Understand, recognize and develop your people</h1>
                     <p>Teambit helps teams create a high performing culture with regular feedback.</p>
                    
                     <div class="buttons">
                         <button>
-                            <img class="google-logo" src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/53/Google_%22G%22_Logo.svg/1024px-Google_%22G%22_Logo.svg.png" alt="">
-                            Sign up with Google
+                            <a>
+                                <img class="google-logo" src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/53/Google_%22G%22_Logo.svg/1024px-Google_%22G%22_Logo.svg.png" alt="">
+                                Sign up with Google
+                            </a>
                         </button>
                         <span>or</span>
                         <button>
-                            <img class="google-logo" src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/53/Google_%22G%22_Logo.svg/1024px-Google_%22G%22_Logo.svg.png" alt="">
-                            Sign up with Slack
+                            <a href="">
+                                <img class="google-logo" src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/53/Google_%22G%22_Logo.svg/1024px-Google_%22G%22_Logo.svg.png" alt="">
+                                Sign up with Slack
+                            </a>                   
                         </button>
                     </div>
                     
-                    <span class="email"><a href="">or use your email address
+                    <span class="email">
+                        <a href="">or use your email address
                         <i class="fa fa-long-arrow-right" aria-hidden="true"></i>
-                    </a></span>
-                </div>
+                        </a>
+                    </span>
+                </div> <!--fine left-cont-->
+
                 <div id="right-cont">
                     <img src="../img/head.jpg" alt="">
                 </div>
@@ -71,6 +90,7 @@
 
         <section id="seconda">
             <div class="container">
+
                 <div class="above-cont">
                     <p>Traditional people processes lead to disengagement and turnover.</p>
                     <div class="figure-text-container">
@@ -87,15 +107,18 @@
                             <p>They are hardcore, formal and disconnected</p>
                         </div>
                     </div>          
-                </div>
+                </div> <!--fine above-cont-->
+
                 <div class="below-cont">
                     <img src="../img/before.png" alt="">
                 </div>
+
             </div>
         </section>
 
         <section id="terza">
             <div class="container">
+
                 <div class="above-cont">
                     <p>It doesn't have to be like that. Teambit is a modern solution that teammates love..</p>
                     <div class="figure-text-container">
@@ -112,18 +135,22 @@
                             <p>They are hardcore, formal and disconnected</p>
                         </div>
                     </div>          
-                </div>
+                </div> <!--fine above-cont-->
+
                 <div class="below-cont">
                     <img src="../img/after.png" alt="">
                     <h3>Here is how it works</h3>
                 </div>
+
             </div>
         </section>
 
         <section id="quarta">
+
             <div class="left">
                 <img class="img-big" src="../img/employee-feedback.jpg" alt="">
             </div>
+
             <div class="right">
                 <div class="text-cont">
                     <h3>Feedback to help teammates improve</h3>
@@ -136,10 +163,12 @@
                     </span>
                 </div>
                 <img class="img-little" src="../img/communication.jpg" alt="">
-            </div>
+            </div> <!--fine right-->
+
         </section>
 
         <section id="quinta">
+
             <div class="left">
                 <div class="text-cont">
                     <h3>Surveys to help the team be better</h3>
@@ -152,16 +181,20 @@
                     </span>
                 </div>
                 <img class="img-little" src="../img/insights.jpg" alt="">
-            </div>
+            </div> <!--fine left-->
+
             <div class="right">
                 <img class="img-big" src="../img/employee-survey.jpg" alt="">
             </div>
+
         </section>
 
         <section id="sesta">
+
             <div class="left">
                 <img class="img-big" src="../img/performance-review.jpg" alt="">
             </div>
+
             <div class="right">
                 <div class="text-cont">
                     <h3>Reviews to help teammates get a fair evaluation</h3>
@@ -174,10 +207,12 @@
                     </span>
                 </div>
                 <img class="img-little" src="../img/review.jpg" alt="">
-            </div>
+            </div> <!--fine right-->
+
         </section>
 
         <section id="settima">
+
             <div class="left">
                 <div class="text-cont">
                     <h3>Praise to help teammates feel valued</h3>
@@ -190,10 +225,12 @@
                     </span>
                 </div>
                 <img class="img-little" src="../img/recognition.jpg" alt="">
-            </div>
+            </div> <!--fine left-->
+
             <div class="right">
                 <img class="img-big" src="../img/employee-recognition.jpg" alt="">
             </div>
+
         </section>
 
         <section id="ottava">
@@ -227,25 +264,99 @@
 
             <div class="buttons">
                 <button>
-                    <img class="google-logo" src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/53/Google_%22G%22_Logo.svg/1024px-Google_%22G%22_Logo.svg.png" alt="">
-                    Sign up with Google
+                    <a>
+                        <img class="google-logo" src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/53/Google_%22G%22_Logo.svg/1024px-Google_%22G%22_Logo.svg.png" alt="">
+                        Sign up with Google
+                    </a>
                 </button>
                 <span>or</span>
                 <button>
-                    <img class="google-logo" src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/53/Google_%22G%22_Logo.svg/1024px-Google_%22G%22_Logo.svg.png" alt="">
-                    Sign up with Slack
+                    <a href="">
+                        <img class="google-logo" src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/53/Google_%22G%22_Logo.svg/1024px-Google_%22G%22_Logo.svg.png" alt="">
+                        Sign up with Slack
+                    </a>                   
                 </button>
             </div>
-            <span class="email"><a href="">
+
+            <span class="email">
+                <a href="">
                 or use your email address 
                 <i class="fa fa-long-arrow-right" aria-hidden="true"></i> 
-            </a></span>
+                </a>
+            </span>
 
         </section>
 
     </main>
 
     <footer>
+
+        <div class="container">
+            <div id="col-left">
+                <img src="../img/logo-small.svg" alt="logo">
+                <p>
+                    <a href="">Teambit</a>
+                    helps teams create high performing cultures by making feedback a daily habit.					
+                </p>
+            </div>
+
+            <div id="col-right">
+                <nav>
+                    <h4>Product</h4>
+                    <ul>
+                        <li><a href="">Feedback</a></li>
+                        <li><a href="">Surveys</a></li>
+                        <li><a href="">Reviews</a></li>
+                        <li><a href="">Praise</a></li>
+                        <li><a href="">Slack Integration</a></li>
+                        <li><a href="">Schedule a demo</a></li>
+                        <li><a href="">Pricing</a></li>
+                    </ul>
+                </nav>
+                <nav>
+                    <h4>About</h4>
+                    <ul>
+                        <li><a href="">About</a></li>
+                        <li><a href="">Terms and Privacy</a></li>
+                        <li><a href="">Help center</a></li>
+                        <li><a href="">Blog</a></li>
+                        <li><a href="">Digest</a></li>
+                    </ul>
+                </nav>
+                <nav>
+                    <h4>Connect</h4>
+                    <ul>
+                        <li><a href="">Contact us</a></li>
+                        <li><a href="">Twitter</a></li>
+                        <li><a href="">Facebook</a></li>
+                        <li><a href="">Linkedin</a></li>
+                    </ul>
+                </nav>
+                <nav>
+                    <h4>Labs</h4>
+                    <ul>
+                        <li><a href="">Manager checklist</a></li>
+                        <li><a href="">Manager</a></li>
+                        <li><a href="">Assessment</a></li>
+                        <li><a href="">Manager handbook</a></li>
+                    </ul>
+                </nav>
+                <nav>
+                    <h4>From the blog</h4>
+                    <ul>
+                        <li><a href="">How to change your company culture: a four-step framework</a></li>
+                        <li><a href="">How teams can be more productive by killing 8-hour workday</a></li>
+                        <li><a href="">How to build high performing teams inspired by nature</a></li>
+                        <li>
+                            <a href="">
+                                View all
+                                <i class="fa fa-long-arrow-right" aria-hidden="true"></i> 
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
 
     </footer>
 

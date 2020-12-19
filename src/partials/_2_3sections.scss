@@ -6,7 +6,6 @@
     
     .container{
         @include display-flex-column;
-        border-bottom: 1px solid gray;
 
         .above-cont, .below-cont{
             height: 400px;
@@ -52,3 +51,8 @@
     
 }
 
+#seconda {
+    .container{
+        border-bottom: 1px solid gray;
+    }
+}

@@ -93,7 +93,52 @@
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-console.log('hello world');
+var header = new Vue({
+  el: "#menu",
+  data: {
+    indexMenu: 0,
+    menu: [{
+      text: "Solutions",
+      link: "#",
+      dropdown: [{
+        droptext: "Feedback",
+        droplink: "#"
+      }, {
+        droptext: "Surveys",
+        droplink: "#"
+      }, {
+        droptext: "Review",
+        droplink: "#"
+      }]
+    }, {
+      text: "Blog",
+      link: "#"
+    }, {
+      text: "Sign in",
+      link: "#"
+    }, {
+      text: "Blog",
+      link: "#"
+    }, {
+      text: "Shop",
+      link: "#"
+    }]
+  },
+  mounted: function mounted() {
+    // al caricamento della pagina il dropdown non è visibile
+    this.indexMenu = "";
+  },
+  methods: {
+    // al click mostra dropdown
+    showDrop: function showDrop(index) {
+      this.indexMenu = index;
+    },
+    // mouseleave nascondi dropdown
+    hideDrop: function hideDrop() {
+      this.indexMenu = "";
+    }
+  }
+});
 
 /***/ }),
 
@@ -104,7 +149,7 @@ console.log('hello world');
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-// removed by extract-text-webpack-plugin
+throw new Error("Module build failed (from ./node_modules/css-loader/index.js):\nModuleBuildError: Module build failed (from ./node_modules/sass-loader/dist/cjs.js):\nSassError: unmatched \"}\".\n   ╷\n86 │ }\r\n   │ ^\n   ╵\n  src\\partials\\_navbar.scss 86:1  @import\n  C:\\progetti\\node-sass-teambit\\src\\app.scss 4:9                       root stylesheet\n    at C:\\progetti\\node-sass-teambit\\node_modules\\webpack\\lib\\NormalModule.js:316:20\n    at C:\\progetti\\node-sass-teambit\\node_modules\\loader-runner\\lib\\LoaderRunner.js:367:11\n    at C:\\progetti\\node-sass-teambit\\node_modules\\loader-runner\\lib\\LoaderRunner.js:233:18\n    at context.callback (C:\\progetti\\node-sass-teambit\\node_modules\\loader-runner\\lib\\LoaderRunner.js:111:13)\n    at C:\\progetti\\node-sass-teambit\\node_modules\\sass-loader\\dist\\index.js:73:7\n    at Function.call$2 (C:\\progetti\\node-sass-teambit\\node_modules\\sass\\sass.dart.js:90633:16)\n    at _render_closure1.call$2 (C:\\progetti\\node-sass-teambit\\node_modules\\sass\\sass.dart.js:79699:12)\n    at _RootZone.runBinary$3$3 (C:\\progetti\\node-sass-teambit\\node_modules\\sass\\sass.dart.js:27088:18)\n    at _FutureListener.handleError$1 (C:\\progetti\\node-sass-teambit\\node_modules\\sass\\sass.dart.js:25616:19)\n    at _Future__propagateToListeners_handleError.call$0 (C:\\progetti\\node-sass-teambit\\node_modules\\sass\\sass.dart.js:25913:49)\n    at Object._Future__propagateToListeners (C:\\progetti\\node-sass-teambit\\node_modules\\sass\\sass.dart.js:4539:77)\n    at _Future._completeError$2 (C:\\progetti\\node-sass-teambit\\node_modules\\sass\\sass.dart.js:25746:9)\n    at _AsyncAwaitCompleter.completeError$2 (C:\\progetti\\node-sass-teambit\\node_modules\\sass\\sass.dart.js:25089:12)\n    at Object._asyncRethrow (C:\\progetti\\node-sass-teambit\\node_modules\\sass\\sass.dart.js:4288:17)\n    at C:\\progetti\\node-sass-teambit\\node_modules\\sass\\sass.dart.js:13180:20\n    at _wrapJsFunctionForAsync_closure.$protected (C:\\progetti\\node-sass-teambit\\node_modules\\sass\\sass.dart.js:4313:15)\n    at _wrapJsFunctionForAsync_closure.call$2 (C:\\progetti\\node-sass-teambit\\node_modules\\sass\\sass.dart.js:25110:12)\n    at _awaitOnObject_closure0.call$2 (C:\\progetti\\node-sass-teambit\\node_modules\\sass\\sass.dart.js:25102:25)\n    at _RootZone.runBinary$3$3 (C:\\progetti\\node-sass-teambit\\node_modules\\sass\\sass.dart.js:27088:18)\n    at _FutureListener.handleError$1 (C:\\progetti\\node-sass-teambit\\node_modules\\sass\\sass.dart.js:25616:19)\n    at _Future__propagateToListeners_handleError.call$0 (C:\\progetti\\node-sass-teambit\\node_modules\\sass\\sass.dart.js:25913:49)\n    at Object._Future__propagateToListeners (C:\\progetti\\node-sass-teambit\\node_modules\\sass\\sass.dart.js:4539:77)\n    at _Future._completeError$2 (C:\\progetti\\node-sass-teambit\\node_modules\\sass\\sass.dart.js:25746:9)\n    at _AsyncAwaitCompleter.completeError$2 (C:\\progetti\\node-sass-teambit\\node_modules\\sass\\sass.dart.js:25089:12)\n    at Object._asyncRethrow (C:\\progetti\\node-sass-teambit\\node_modules\\sass\\sass.dart.js:4288:17)\n    at C:\\progetti\\node-sass-teambit\\node_modules\\sass\\sass.dart.js:17935:20\n    at _wrapJsFunctionForAsync_closure.$protected (C:\\progetti\\node-sass-teambit\\node_modules\\sass\\sass.dart.js:4313:15)\n    at _wrapJsFunctionForAsync_closure.call$2 (C:\\progetti\\node-sass-teambit\\node_modules\\sass\\sass.dart.js:25110:12)\n    at _awaitOnObject_closure0.call$2 (C:\\progetti\\node-sass-teambit\\node_modules\\sass\\sass.dart.js:25102:25)\n    at _RootZone.runBinary$3$3 (C:\\progetti\\node-sass-teambit\\node_modules\\sass\\sass.dart.js:27088:18)\n    at _FutureListener.handleError$1 (C:\\progetti\\node-sass-teambit\\node_modules\\sass\\sass.dart.js:25616:19)\n    at _Future__propagateToListeners_handleError.call$0 (C:\\progetti\\node-sass-teambit\\node_modules\\sass\\sass.dart.js:25913:49)\n    at Object._Future__propagateToListeners (C:\\progetti\\node-sass-teambit\\node_modules\\sass\\sass.dart.js:4539:77)\n    at _Future._completeError$2 (C:\\progetti\\node-sass-teambit\\node_modules\\sass\\sass.dart.js:25746:9)\n    at _AsyncAwaitCompleter.completeError$2 (C:\\progetti\\node-sass-teambit\\node_modules\\sass\\sass.dart.js:25089:12)\n    at Object._asyncRethrow (C:\\progetti\\node-sass-teambit\\node_modules\\sass\\sass.dart.js:4288:17)");
 
 /***/ }),
 

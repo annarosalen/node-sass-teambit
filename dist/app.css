@@ -20,6 +20,10 @@ a {
   color: black;
 }
 
+li {
+  list-style: none;
+}
+
 .buttons {
   display: flex;
   flex-direction: row;
@@ -34,10 +38,6 @@ a {
 }
 
 .buttons button {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: center;
   padding: 10px;
   background-color: #0e14ee;
   border: none;
@@ -45,8 +45,19 @@ a {
   color: white;
 }
 
+.buttons button a {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
 .buttons button img {
   padding-right: 10px;
+}
+
+.buttons button:hover {
+  background-color: #7f14d4;
 }
 
 .google-logo {
@@ -59,46 +70,85 @@ a {
 }
 
 header {
+  width: 100%;
+  position: fixed;
+  background-color: white;
   display: flex;
+  flex-direction: row;
   justify-content: center;
-  min-height: 100px;
-  padding-bottom: 40px;
 }
 
-nav {
+header nav {
   display: flex;
   flex-direction: row;
   border-bottom: 1px solid gray;
   align-items: center;
+  padding: 20px 0;
 }
 
-nav #logo {
+header nav #logo {
+  display: flex;
+  flex-direction: row;
   width: 20%;
   color: #040f0f;
 }
 
-nav #menu {
+header nav #logo img {
+  padding-right: 10px;
+}
+
+header nav #menu {
   width: 70%;
   text-align: right;
   padding-right: 40px;
 }
 
-nav #menu li {
+header nav #menu .lidrop {
+  display: inline-block;
+  padding-left: 40px;
+  font-size: 18px;
+  font-weight: bold;
+  position: relative;
+}
+
+header nav #menu .lidrop a {
+  color: #040f0f;
+}
+
+header nav #menu .lidrop i {
+  font-size: 10px;
+  padding-left: 10px;
+}
+
+header nav #menu .dropdown {
+  display: none;
+  position: absolute;
+  top: 30px;
+  left: 0;
+  background-color: white;
+  height: 100px;
+  width: 100px;
+  padding: 10px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+header nav #menu .active {
+  display: block;
+  z-index: 50;
+}
+
+header nav #menu .dropdown li {
+  padding-bottom: 10px;
+}
+
+header nav #menu li {
   display: inline-block;
   padding-left: 40px;
   font-size: 18px;
   font-weight: bold;
 }
 
-nav #menu li a {
-  color: #040f0f;
-}
-
-nav #menu li i {
-  font-size: 10px;
-}
-
-nav button {
+header nav button {
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -112,24 +162,24 @@ nav button {
   border-radius: 10px;
 }
 
-nav button img {
+header nav button img {
   padding-right: 10px;
 }
 
-nav button:hover {
+header nav button:hover {
   background-color: #30488f;
   color: white;
 }
 
 main section {
-  height: 800px;
-  border-bottom: 1px solid black;
+  padding-bottom: 50px;
 }
 
 #prima {
   display: flex;
   justify-content: center;
   height: 600px;
+  padding-top: 200px;
 }
 
 #prima .container #left-cont,
@@ -174,7 +224,6 @@ main section {
 #terza .container {
   display: flex;
   flex-direction: column;
-  border-bottom: 1px solid gray;
 }
 
 #seconda .container .above-cont,
@@ -238,6 +287,10 @@ main section {
   padding-top: 20px;
 }
 
+#seconda .container {
+  border-bottom: 1px solid gray;
+}
+
 #quarta,
 #quinta,
 #sesta,
@@ -284,7 +337,7 @@ main section {
 }
 
 .img-big {
-  max-width: 762px;
+  max-width: 710px;
 }
 
 .img-little {
@@ -323,11 +376,13 @@ main section {
   padding: 20px 20px 20px 40px;
   border: 1px solid gray;
   margin: 30px 0;
+  border-radius: 10px;
 }
 
 #ottava #quote p {
   font-size: 18px;
   margin-bottom: 20px;
+  line-height: 1.5;
 }
 
 #ottava #author {
@@ -343,5 +398,68 @@ main section {
 
 #ottava #author #name {
   color: blue;
+}
+
+footer {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+footer .container {
+  margin: 100px 0;
+}
+
+footer .container #col-left {
+  width: 32%;
+  float: left;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+}
+
+footer .container #col-left img {
+  width: 120px;
+  margin-right: 20px;
+}
+
+footer .container #col-left p {
+  font-size: 20px;
+  line-height: 1.2;
+}
+
+footer .container #col-left p a {
+  color: blue;
+}
+
+footer .container #col-right {
+  width: 68%;
+  float: left;
+}
+
+footer .container #col-right > nav {
+  width: calc(100% /5);
+  float: left;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+footer .container #col-right > nav h4 {
+  font-size: 20px;
+}
+
+footer .container #col-right > nav ul {
+  padding-top: 20px;
+}
+
+footer .container #col-right > nav ul li {
+  line-height: 1.8;
+  font-size: 16px;
+}
+
+footer .container #col-right > nav ul li i {
+  vertical-align: middle;
 }
 

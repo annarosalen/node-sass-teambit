@@ -1,0 +1,61 @@
+footer{   
+    @include display-flex-row;
+    justify-content: center;
+
+    .container{
+        margin: 100px 0;
+
+        #col-left{
+            width: 32%;
+            float: left;
+            @include display-flex-row;
+            align-items: flex-start;
+
+            img{
+                width: 120px;
+                margin-right: 20px;
+            }
+
+            p{
+                font-size: 20px;
+                line-height: 1.2;
+                
+                a{
+                    color: blue;
+                }
+            }
+        }
+    
+        #col-right{
+            width: 68%;
+            float: left;
+
+            & >nav{
+                width: calc(100% /5);
+                float: left;
+                height: 100%;
+                @include display-flex-column;
+                align-items: flex-start;
+
+                h4{
+                    font-size: 20px;
+                }
+
+                ul{
+                    padding-top: 20px;
+                    
+                    li{
+                        line-height: 1.8;
+                        font-size: 16px;
+
+                        i{
+                            vertical-align: middle;
+                        }
+                    }
+                }
+            }
+
+        }
+    }
+    
+}

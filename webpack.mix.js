@@ -5,6 +5,7 @@ mix
     .js('src/app.js', 'dist/')
     .sass('src/app.scss', 'dist/')
     .copy('src/*.html', 'dist/');
+    // .options({ processCssUrls: false });
 
 // Full API
 // mix.js(src, output);
